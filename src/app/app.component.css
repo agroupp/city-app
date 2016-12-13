@@ -1,0 +1,72 @@
+md-sidenav-layout{
+/*  background: #000; */
+}
+.app-sidenav{
+  padding: 10px;
+  min-width: 100px;
+}
+.app-toolbar-filler{
+  flex: 1 1 auto;
+}
+.app-toolbar-menu{
+  padding: 0 14px 0 14px;
+  color: #fff;
+}
+.app-icon-button {
+  box-shadow: none;
+  user-select: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  filter: none;
+  font-weight: normal;
+  height: auto;
+  line-height: inherit;
+  margin: 0;
+  min-width: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+.brand{
+  font-size: 1.8em;
+  text-align: center;
+}
+.app-content{
+  padding: 20px;
+  height: 80vh;
+}
+a{
+  color: #bbb;
+  text-decoration: none;
+}
+.active{
+  color: #fff;
+}
+a::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  margin-top: 5px;
+  background: #fff;
+  transition: 0.2s width;
+}
+a:hover::after,
+a:focus::after{
+  width: 20%;
+}
+
+.nav{
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+.nav li{
+  display: block;
+  padding: 10px;
+  text-align: left;
+}
+.nav li:first-child{
+  border-bottom: 1px solid #fff;
+}

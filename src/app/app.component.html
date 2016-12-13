@@ -1,3 +1,23 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-layout>
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    <span class="brand">Digital Town</span>
+    <ul class="nav">
+      <li>City</li>
+      <li><a routerLink="/info" routerLinkActive="active">Information</a></li>
+      <li><a routerLink="/news" routerLinkActive="active">News</a></li>
+      <li><a routerLink="/events" routerLinkActive="active">Events</a></li>
+    </ul>
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+
+    City Application
+    <span class="app-toolbar-filler"></span>
+  </md-toolbar>
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-layout>
