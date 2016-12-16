@@ -2,7 +2,7 @@
 @include md-core();
 
 $primary: md-palette($md-blue-grey);
-$accent: md-palette($md-pink);
+$accent: md-palette($md-deep-orange);
 $warn: md-palette($md-red);
 
 $app-theme: md-dark-theme($primary, $accent, $warn);

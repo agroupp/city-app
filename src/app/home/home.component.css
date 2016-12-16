@@ -1,0 +1,24 @@
+.main{
+  background: url('../../assets/img/bg-home.jpg') center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.content{
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  width: 80%;
+  height: 85%;
+  top: 5%;
+  left: 10%;
+}
+.h1{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #333;
+  font-weight: 800;
+}

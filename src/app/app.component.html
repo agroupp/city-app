@@ -1,11 +1,12 @@
 <md-sidenav-layout>
   <md-sidenav #sidenav mode="side" class="app-sidenav">
-    <span class="brand">Digital Town</span>
+    <span class="brand">
+      <a routerLink="">Digital Town</a></span>
     <ul class="nav">
       <li>City</li>
-      <li><a routerLink="/info" routerLinkActive="active">Information</a></li>
-      <li><a routerLink="/news" routerLinkActive="active">News</a></li>
-      <li><a routerLink="/events" routerLinkActive="active">Events</a></li>
+      <li *ngFor="let item of cityMenu">
+        <a [routerLink]="item.routerLink" routerLinkActive="active">{{ item.label }}</a>
+      </li>
     </ul>
   </md-sidenav>
 
@@ -16,6 +17,16 @@
 
     City Application
     <span class="app-toolbar-filler"></span>
+    <button md-raised-button color="accent" [md-menu-trigger-for]="menu" class="lang-btn">
+      {{ getButtonLabel("language") }} ({{ currentLanguage.name }})
+    </button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item *ngFor="let lang of languages" (click)="selectCurrentLanguage(lang)">
+        {{ lang.name }}
+      </button>
+    </md-menu>
+    <button md-raised-button color="primary">{{ getButtonLabel("register") }}</button>
+    <button md-raised-button color="primary">{{ getButtonLabel("login")}}</button>
   </md-toolbar>
   <div class="app-content">
     <router-outlet></router-outlet>

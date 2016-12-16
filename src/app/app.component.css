@@ -1,6 +1,3 @@
-md-sidenav-layout{
-/*  background: #000; */
-}
 .app-sidenav{
   padding: 10px;
   min-width: 100px;
@@ -32,18 +29,21 @@ md-sidenav-layout{
   font-size: 1.8em;
   text-align: center;
 }
-.app-content{
-  padding: 20px;
-  height: 80vh;
+.brand > a{
+  color: #fff;
+  text-decoration: none;
 }
-a{
+.app-content{
+  height: 89vh;
+}
+.nav a{
   color: #bbb;
   text-decoration: none;
 }
-.active{
+.nav .active{
   color: #fff;
 }
-a::after{
+.nav a::after{
   content: '';
   display: block;
   width: 0;
@@ -52,8 +52,8 @@ a::after{
   background: #fff;
   transition: 0.2s width;
 }
-a:hover::after,
-a:focus::after{
+.nav a:hover::after,
+.nav a:focus::after{
   width: 20%;
 }
 
@@ -69,4 +69,7 @@ a:focus::after{
 }
 .nav li:first-child{
   border-bottom: 1px solid #fff;
+}
+.lang-btn{
+  margin: 0 10px;
 }

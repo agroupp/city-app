@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="content">
+    <div class="h1">
+      <span *ngIf="_languageService.getCurrentLanguage().code === 'en'">
+        Welcome to City Application
+      </span>
+      <span *ngIf="_languageService.getCurrentLanguage().code === 'fr'">
+        Bienvenue à City Application
+      </span>
+      <span *ngIf="_languageService.getCurrentLanguage().code === 'de'">
+        Willkommen bei City Application
+      </span>
+      <span *ngIf="_languageService.getCurrentLanguage().code === 'es'">
+        Bienvenido a City Application
+      </span>
+      <span *ngIf="_languageService.getCurrentLanguage().code === 'ru'">
+        Добро пожаловать в City Application
+      </span>
+    </div>
+  </div>
+</div>
